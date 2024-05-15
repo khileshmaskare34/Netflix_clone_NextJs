@@ -3,10 +3,10 @@ import React from 'react'
 import Moviecard from '../components/Moviecard';
 
 const movie = async () => {
-    
+
     await new Promise(resolve => setTimeout(resolve, 2000));
 
-    const url = 'https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en';
+    const url = process.env.RAPID_KEY;
     const options = {
     method: 'GET',
     headers: {
